@@ -1,0 +1,22 @@
+.books__icon {
+  position: absolute;
+  font-size: 3rem;
+  color: var(--color-white);
+  transition: all 0.3s;
+  top: 50%;
+
+  &--left {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--right {
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: var(--color-secondary-light);
+  }
+}

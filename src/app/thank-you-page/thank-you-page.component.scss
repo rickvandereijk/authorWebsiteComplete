@@ -1,0 +1,19 @@
+.container {
+  width: 100vw;
+  height: 70rem;
+  margin-bottom: 6rem;
+}
+
+.section-message {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  background: url("/./assets/background2.jpg"),
+    linear-gradient(to bottom, var(--color-black), var(--color-primary-dark));
+  background-size: cover;
+  background-blend-mode: soft-light;
+  background-position: 50% 50%;
+}

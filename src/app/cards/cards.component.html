@@ -1,0 +1,6 @@
+<div class="section-cards__card" *ngFor="let card of cards">
+  <img src="{{ card.image }}" class="section-cards__image" />
+  <h3 class="section-cards__h3">{{ card.title }}</h3>
+  <p class="section-cards__p">{{ card.information }}</p>
+  <app-small-button [buttonText]="buttonText[0]"></app-small-button>
+</div>

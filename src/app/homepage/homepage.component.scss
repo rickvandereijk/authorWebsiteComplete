@@ -1,0 +1,61 @@
+@import "../_variables.scss";
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template-rows: 100vh repeat(3, min-content);
+  grid-template-columns:
+    minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem))
+    minmax(6rem, 1fr);
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-rows: 70rem repeat(3, max-content);
+  }
+}
+
+.section-quotes {
+  position: relative;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  background: url("/./assets/background2.jpg"),
+    linear-gradient(to bottom, var(--color-black), var(--color-black));
+  background-size: cover;
+  background-blend-mode: soft-light;
+  background-position: 50% 50%;
+}
+
+.section-cards {
+  align-self: center;
+  grid-column: 2/10;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.section-books {
+  margin-top: 6rem;
+  grid-row: 2/3;
+  margin-bottom: 6rem;
+  grid-column: 2/10;
+}
+
+.section-form {
+  background: url("/./assets/background2.jpg"),
+    linear-gradient(to bottom, var(--color-black), var(--color-black));
+  background-size: cover;
+  background-blend-mode: soft-light;
+  background-position: 50% 50%;
+  grid-row: 4/5;
+  grid-column: 1/-1;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6rem;
+}

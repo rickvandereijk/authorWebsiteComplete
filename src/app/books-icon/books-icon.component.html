@@ -1,0 +1,11 @@
+<span
+  *ngIf="arrowRight; else elseBlock"
+  class="books__icon books__icon--right material-icons"
+>
+  arrow_forward_ios
+</span>
+<ng-template #elseBlock
+  ><span class="books__icon books__icon--left material-icons">
+    arrow_back_ios
+  </span>
+</ng-template>

@@ -1,0 +1,12 @@
+.section-footer {
+  background-color: var(--color-black);
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__p {
+    color: var(--color-white);
+    font-family: Roboto;
+    font-size: 1.6rem;
+  }
+}

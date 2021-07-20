@@ -1,0 +1,15 @@
+<h1 class="section-quote__h1">
+  The <span class="section-quote__h1--span">Space Wizards</span> <br />Quote
+  Generator
+</h1>
+<div class="section-quote__box" *ngIf="this.quote.data[0].book">
+  <p class="section-quote__p">
+    {{ this.quote.data[0].quote }}
+  </p>
+  <p class="section-quote__p--book">~ {{ this.quote.data[0].book }} ~</p>
+</div>
+<button (click)="generateQuote()">Generate Space Quote</button>
+<div class="section-quote__bottom-bar">
+  <h6 class="section-quote__h6">Receive a free Space Wizards e-book</h6>
+  <app-small-button [buttonText]="buttonText"></app-small-button>
+</div>

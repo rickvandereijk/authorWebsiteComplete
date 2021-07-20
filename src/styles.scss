@@ -1,1 +1,160 @@
-/* You can add global styles to this file, and also import other style files */
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;
+
+@font-face {
+  font-family: "Neue Montreal Regular";
+  src: url(./assets/fonts/neueMontreal/NeueMontreal-Regular.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Fuji Regular";
+  src: url(./assets/fonts/fuji/Fuji-Regular.ttf) format("truetype");
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: $bp-large) {
+    h1 {
+      font-size: 5rem;
+    }
+    h2 {
+      font-size: 3.1rem;
+    }
+
+    h3 {
+      font-size: 2.8rem;
+    }
+
+    h4 {
+      font-size: 2.5rem;
+    }
+
+    h5 {
+      font-size: 2.2rem;
+    }
+
+    h6 {
+      font-size: 2.2rem;
+    }
+
+    font-size: 57.5%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    h1 {
+      font-size: 4.6rem;
+    }
+
+    h2 {
+      font-size: 2.8rem;
+    }
+
+    h3 {
+      font-size: 2.8rem;
+    }
+
+    h4 {
+      font-size: 2.2rem;
+    }
+
+    h5 {
+      font-size: 2.2rem;
+    }
+  }
+}
+body {
+  --color-primary: #d8e4ff;
+  --color-primary-dark: #321735;
+  --color-primary-light: #44bba4;
+  --color-secondary-light: #44bba4;
+  --color-secondary-dark: #ff6666;
+  --color-white: #fdfdfd;
+  --color-black: #222;
+  font-family: "Fuji Regular";
+  font: inherit;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  color: var(--color-white);
+  line-height: 1;
+  font-family: "Fuji Regular";
+}
+
+h1 {
+  font-size: 6.4rem;
+
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 4.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 3.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+h4 {
+  letter-spacing: 0.1rem;
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
+p {
+  color: var(--color-black);
+  font-size: 2rem;
+  font-family: "Neue Montreal";
+}
+
+button {
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  background-color: transparent;
+  font-family: "Fuji Regular";
+
+  padding: 1.3rem 5.2rem;
+  position: relative;
+  border-top: 0.2rem solid rgba(248, 248, 255, 0.8);
+  border-left: 0.15rem solid rgba(248, 248, 255, 0.55);
+  border-right: 0.15rem solid rgba(248, 248, 255, 0.55);
+  border-bottom: 0.1rem solid rgba(248, 248, 255, 0.3);
+  color: var(--color-white);
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  &:hover {
+    color: var(--color-secondary-light);
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 1.9rem;
+  }
+}

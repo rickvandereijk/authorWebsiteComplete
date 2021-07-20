@@ -1,0 +1,36 @@
+<div class="section-form__form">
+  <img src="/./assets/Book_3.png" class="section-form__image" />
+  <form [formGroup]="freeeBookForm" (ngSubmit)="sendeBook()">
+    <div class="section-form__content">
+      <h3 class="section-form__h2">
+        Your <span class="section-form__h2--span">free e-book</span> is waiting
+      </h3>
+      <input
+        type="email"
+        placeholder="Enter Email Address Here"
+        class="section-form__input"
+        formControlName="email"
+      />
+
+      <button
+        type="submit"
+        class="section-form__button"
+        [disabled]="!freeeBookForm.valid"
+      >
+        Space-surf My Book To Me!
+      </button>
+      <div *ngIf="!email.valid && (email.dirty || email.touched)">
+        <div [hidden]="!email.errors.required">
+          <p class="section-form__p">Email is required</p>
+        </div>
+        <div [hidden]="!email.errors.email">
+          <p class="section-form__p">Invalid email id</p>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--
+
+  -->

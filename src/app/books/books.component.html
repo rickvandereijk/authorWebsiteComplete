@@ -1,0 +1,56 @@
+<div class="section-books__books">
+  <div [ngClass]="slides[0]">
+    <img src="./assets/Book_3.png" class="section-books__image" />
+    <div class="section-books__content">
+      <h2 class="section-books__h2">Books by Rick van der Eijk</h2>
+      <h5 class="section-books__h5">The joy of Brussels sprouts</h5>
+      <p class="section-books__p">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nibh
+        ipsum, hendrerit ut urna id, commodo fermentum ex. Cras et lacus ut
+        tellus tincidunt venenatis. Aliquam quis ex a turpis semper consectetur
+        at et nunc.
+      </p>
+      <app-small-button [buttonText]="buttonText[0]"></app-small-button>
+    </div>
+  </div>
+
+  <div [ngClass]="slides[1]">
+    <img src="./assets/Book_2.png" class="section-books__image" />
+    <div class="section-books__content">
+      <h2 class="section-books__h2">Books by Rick van der Eijk</h2>
+      <h5 class="section-books__h5">The refined art of cynicism</h5>
+      <p class="section-books__p">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nibh
+        ipsum, hendrerit ut urna id, commodo fermentum ex. Cras et lacus ut
+        tellus tincidunt venenatis. Aliquam quis ex a turpis semper consectetur
+        at et nunc.
+      </p>
+      <app-small-button [buttonText]="buttonText[0]"></app-small-button>
+    </div>
+  </div>
+
+  <div [ngClass]="slides[2]">
+    <img src="./assets/Book_1.jpg" class="section-books__image" />
+    <div class="section-books__content">
+      <h2 class="section-books__h2">Books by Rick van der Eijk</h2>
+      <h5 class="section-books__h5">Space wizards versus tentacle monsters</h5>
+      <p class="section-books__p">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nibh
+        ipsum, hendrerit ut urna id, commodo fermentum ex. Cras et lacus ut
+        tellus tincidunt venenatis. Aliquam quis ex a turpis semper consectetur
+        at et nunc.
+      </p>
+      <app-small-button [buttonText]="buttonText[0]"></app-small-button>
+    </div>
+  </div>
+  <app-books-icon
+    class="section-books__icon"
+    [arrowRight]="false"
+    (click)="clickLeft()"
+  ></app-books-icon>
+  <app-books-icon
+    class="section-books__icon--right"
+    [arrowRight]="true"
+    (click)="clickRight()"
+  ></app-books-icon>
+</div>

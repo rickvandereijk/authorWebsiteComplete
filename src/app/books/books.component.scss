@@ -1,0 +1,96 @@
+@import "../_variables.scss";
+
+.section-books {
+  &__books {
+    background-color: var(--color-black);
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 17% max-content 1fr 17%;
+    min-height: 48rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      min-height: 60rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      grid-template-columns: 17% 1fr 17%;
+      grid-template-rows: min-content mmin-content;
+      min-height: 78rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      min-height: 90rem;
+    }
+  }
+
+  &__book {
+    padding: 3rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: transform 1s;
+    display: grid;
+    grid-template-columns: 17% min-content 1fr 17%;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-template-columns: 17% 1fr 17%;
+    }
+  }
+
+  &__book--0 {
+    transform: translateX(0%);
+  }
+
+  &__book--1 {
+    transform: translateX(100%);
+  }
+
+  &__book--2 {
+    transform: translateX(200%);
+  }
+
+  &__image {
+    max-width: 28rem;
+    padding-right: 3rem;
+    grid-column: 2/3;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-row: 1/2;
+      margin-bottom: 3rem;
+    }
+  }
+  &__content {
+    @media only screen and (max-width: $bp-large) {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+  }
+
+  &__p {
+    color: var(--color-white);
+    margin-bottom: 3rem;
+  }
+
+  &__h2 {
+    margin-bottom: 2rem;
+  }
+
+  &__h5 {
+    color: var(--color-primary-light);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+  &__icon {
+    position: relative;
+    &--right {
+      position: relative;
+      grid-column: 4/-1;
+
+      @media only screen and (max-width: $bp-large) {
+        grid-column: 3/-1;
+      }
+    }
+  }
+}

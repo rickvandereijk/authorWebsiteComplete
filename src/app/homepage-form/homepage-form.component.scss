@@ -1,0 +1,71 @@
+@import "../_variables.scss";
+
+.section-form {
+  &__form {
+    background-color: rgba(110, 168, 52, 0.25);
+    padding: 3rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 80rem;
+    text-align: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      min-width: 54rem;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__image {
+    width: 20rem;
+    margin-right: 3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__h2 {
+    margin-bottom: 2rem;
+
+    &--span {
+      font-style: italic;
+      color: var(--color-secondary-light);
+    }
+  }
+  &__input {
+    margin-bottom: 3rem;
+    width: 40rem;
+    height: 5rem;
+    border-radius: 1rem;
+    outline: none;
+    padding-left: 2rem;
+    color: var(--color-black);
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    border: none;
+    font-family: "Fuji Regular";
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 4.4rem;
+      font-size: 1.7rem;
+    }
+  }
+
+  &__p {
+    color: var(--color-white);
+  }
+
+  &__button {
+    margin-bottom: 3rem;
+  }
+}
